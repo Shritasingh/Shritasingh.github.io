@@ -1,0 +1,12 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+  <rect width="640" height="360" fill="#f7f7f7"/>
+  <g fill="none" stroke="#a8134e" stroke-width="3">
+    <path d="M100 280 L220 200 L340 230 L460 140 L560 170"/>
+    <circle cx="220" cy="200" r="8" fill="#a8134e"/>
+    <circle cx="340" cy="230" r="8" fill="#c41e6a"/>
+    <circle cx="460" cy="140" r="8" fill="#7a0f3d"/>
+  </g>
+  <rect x="430" y="90" width="100" height="60" rx="8" fill="#fbe6ef" stroke="#a8134e" stroke-width="2"/>
+  <text x="448" y="125" font-family="monospace" font-size="14" fill="#a8134e">predict</text>
+  <text x="40" y="330" font-family="Georgia, serif" font-size="18" fill="#212121">Prediction · Obstacle Avoidance</text>
+</svg>

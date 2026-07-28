@@ -1,0 +1,17 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#fbe6ef"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#g)"/>
+  <g fill="#a8134e">
+    <rect x="80" y="90" width="90" height="60" rx="8" opacity="0.9"/>
+    <rect x="190" y="120" width="90" height="60" rx="8" opacity="0.7"/>
+    <rect x="300" y="150" width="90" height="60" rx="8" opacity="0.55"/>
+    <rect x="410" y="180" width="90" height="60" rx="8" opacity="0.4"/>
+  </g>
+  <path d="M125 150 L190 150 M280 180 L300 180 M390 210 L410 210" stroke="#7a0f3d" stroke-width="2.5" fill="none"/>
+  <text x="40" y="330" font-family="Georgia, serif" font-size="18" fill="#212121">Block ARMAX · Recursive Estimation</text>
+</svg>

@@ -1,0 +1,18 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fbe6ef"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#g)"/>
+  <g fill="none" stroke="#a8134e" stroke-width="2.5" opacity="0.85">
+    <ellipse cx="220" cy="180" rx="70" ry="48"/>
+    <ellipse cx="220" cy="180" rx="110" ry="78"/>
+    <circle cx="220" cy="180" r="8" fill="#a8134e" stroke="none"/>
+    <path d="M320 90 L420 90 L420 140 L500 140" stroke-linecap="round"/>
+    <path d="M320 180 L500 180" stroke-linecap="round"/>
+    <path d="M320 270 L390 270 L390 220 L500 220" stroke-linecap="round"/>
+  </g>
+  <text x="40" y="330" font-family="Georgia, serif" font-size="18" fill="#212121">Block IEKF · ARMAX</text>
+</svg>

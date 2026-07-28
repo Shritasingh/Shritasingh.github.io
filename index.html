@@ -72,29 +72,45 @@
       <h2 class="section-title">selected publications</h2>
       <a class="section-link" href="publications.html">all publications →</a>
     </div>
-    <ol class="num-list">
-      <li class="num-item">
+    <div class="pub-tiles">
+      <article class="pub-tile">
+        <img class="pub-thumb" src="assets/img/pubs/iekf.svg" alt="">
         <div>
-          <p class="num-title">Development of Block Iterated Extended Kalman Filter for Recursive Estimation of ARMAX Model Parameters</p>
-          <p class="num-authors"><span class="me">Shrita Singh</span>, Ashutosh Singh, Sachin Patwardhan</p>
-          <p class="num-venue">Indian Control Conference (ICC) · 2023</p>
+          <span class="pub-badge">First author</span>
+          <h3>Development of Block Iterated Extended Kalman Filter for Recursive Estimation of ARMAX Model Parameters</h3>
+          <p class="pub-venue">Indian Control Conference (ICC) · 2023</p>
+          <p class="pub-authors"><span class="me">Shrita Singh</span>, Ashutosh Singh, Sachin Patwardhan</p>
+          <p class="pub-tldr">TL;DR: A shifting-window Block IEKF for online ARMAX parameter tracking, validated on simulation and quadruple-tank experiments.</p>
+          <div class="pub-links">
+            <a href="https://doi.org/10.1109/icc61519.2023.10442563" target="_blank" rel="noopener">DOI</a>
+          </div>
         </div>
-      </li>
-      <li class="num-item">
+      </article>
+      <article class="pub-tile">
+        <img class="pub-thumb" src="assets/img/pubs/armax.svg" alt="">
         <div>
-          <p class="num-title">Development of Block Oriented Recursive and Constrained Parameter Estimation Schemes for ARMAX Models</p>
-          <p class="num-authors"><span class="me">Shrita Singh</span>, Kunal Kumar, Sachin Patwardhan</p>
-          <p class="num-venue">IFAC Symposium on Dynamics and Control of Process Systems · 2022</p>
+          <span class="pub-badge">First author</span>
+          <h3>Development of Block Oriented Recursive and Constrained Parameter Estimation Schemes for ARMAX Models</h3>
+          <p class="pub-venue">IFAC DYCOPS · 2022</p>
+          <p class="pub-authors"><span class="me">Shrita Singh</span>, Kunal Kumar, Sachin Patwardhan</p>
+          <p class="pub-tldr">TL;DR: Block-data recursive updates with stability constraints for ARMAX noise models, tested on temperature control and quadruple-tank data.</p>
+          <div class="pub-links">
+            <a href="https://doi.org/10.1016/j.ifacol.2022.07.414" target="_blank" rel="noopener">DOI</a>
+            <a href="https://skoge.folk.ntnu.no/prost/proceedings/dycops-2022/files/0100.pdf" target="_blank" rel="noopener">PDF</a>
+          </div>
         </div>
-      </li>
-      <li class="num-item">
+      </article>
+      <article class="pub-tile">
+        <img class="pub-thumb" src="assets/img/pubs/nanosat.svg" alt="">
         <div>
-          <p class="num-title">Closed Loop Simulation for Attitude Control of Nano-Satellite</p>
-          <p class="num-authors">Riya Singh, <span class="me">Shrita Singh</span>, et al.</p>
-          <p class="num-venue">Advances in Small Satellite Technologies, Springer · 2020</p>
+          <span class="pub-badge">Co-author</span>
+          <h3>Closed Loop Simulation for Attitude Control of Nano-Satellite</h3>
+          <p class="pub-venue">Advances in Small Satellite Technologies, Springer · 2020</p>
+          <p class="pub-authors">Riya Singh, <span class="me">Shrita Singh</span>, et al.</p>
+          <p class="pub-tldr">TL;DR: Modular closed-loop attitude dynamics simulation and on-board-in-loop PID validation for IIT Bombay’s student CubeSat.</p>
         </div>
-      </li>
-    </ol>
+      </article>
+    </div>
   </section>
 
   <section id="background">
@@ -103,65 +119,46 @@
     </div>
 
     <div class="bg-toggle" role="tablist" aria-label="Background">
-      <button type="button" class="bg-tab active" role="tab" aria-selected="true" aria-controls="panel-work" id="tab-work" data-panel="work">Work experience</button>
+      <button type="button" class="bg-tab active" role="tab" aria-selected="true" aria-controls="panel-work" id="tab-work" data-panel="work">Experience</button>
       <button type="button" class="bg-tab" role="tab" aria-selected="false" aria-controls="panel-education" id="tab-education" data-panel="education">Education</button>
     </div>
 
     <div class="bg-panel active" id="panel-work" role="tabpanel" aria-labelledby="tab-work">
-      <div class="bar-timeline">
-        <div class="bar-lanes bar-lanes-work">
-          <div class="bar-track" aria-hidden="true">
-            <div class="bar-seg" style="--bar-color:#a8134e; --bar-start:0.08; --bar-end:0.14"></div>
+      <div class="tl" aria-hidden="false">
+        <div class="tl-item above" style="--x:12%; --dot:#a8134e">
+          <div class="tl-card">
+            <p class="tl-date">May – Jul 2020</p>
+            <p class="tl-role">Junior Data Scientist</p>
+            <p class="tl-org">Capgemini SE</p>
+            <p class="tl-loc">Bangalore, India</p>
           </div>
-          <div class="bar-track" aria-hidden="true">
-            <div class="bar-seg" style="--bar-color:#c41e6a; --bar-start:0.22; --bar-end:0.28"></div>
-          </div>
-          <div class="bar-track" aria-hidden="true">
-            <div class="bar-seg" style="--bar-color:#7a0f3d; --bar-start:0.38; --bar-end:0.82"></div>
-          </div>
-          <div class="bar-track" aria-hidden="true">
-            <div class="bar-seg" style="--bar-color:#d4537a; --bar-start:0.82; --bar-end:1"></div>
+          <span class="tl-dot"></span>
+        </div>
+        <div class="tl-item below" style="--x:32%; --dot:#c41e6a">
+          <span class="tl-dot"></span>
+          <div class="tl-card">
+            <p class="tl-date">Jun – Aug 2021</p>
+            <p class="tl-role">R&amp;D Intern</p>
+            <p class="tl-org">ABB Corporate Research</p>
+            <p class="tl-loc">Bangalore, India</p>
           </div>
         </div>
-        <div class="bar-labels">
-          <span>2020</span><span>2021</span><span>2022</span><span>2023</span><span>2024</span><span>2025</span><span>2026</span>
-        </div>
-      </div>
-      <div class="h-timeline bar-cards">
-        <div class="h-item above">
-          <div class="h-card" style="--card-accent:#a8134e">
-            <p class="h-date">May – Jul 2020</p>
-            <p class="h-role">Junior Data Scientist</p>
-            <p class="h-location">Bangalore, India</p>
-            <p class="h-org">Capgemini SE</p>
+        <div class="tl-item above" style="--x:62%; --dot:#7a0f3d">
+          <div class="tl-card">
+            <p class="tl-date">Oct 2022 – Aug 2025</p>
+            <p class="tl-role">AI Researcher</p>
+            <p class="tl-org">Honda R&amp;D Tokyo</p>
+            <p class="tl-loc">Tokyo, Japan</p>
           </div>
-          <div class="h-dot" style="border-color:#a8134e"></div>
+          <span class="tl-dot"></span>
         </div>
-        <div class="h-item below">
-          <div class="h-dot" style="border-color:#c41e6a"></div>
-          <div class="h-card" style="--card-accent:#c41e6a">
-            <p class="h-date">Jun – Aug 2021</p>
-            <p class="h-role">R&amp;D Intern</p>
-            <p class="h-location">Bangalore, India</p>
-            <p class="h-org">ABB Corporate Research</p>
-          </div>
-        </div>
-        <div class="h-item above">
-          <div class="h-card" style="--card-accent:#7a0f3d">
-            <p class="h-date">Oct 2022 – Aug 2025</p>
-            <p class="h-role">AI Researcher</p>
-            <p class="h-location">Tokyo, Japan</p>
-            <p class="h-org">Honda R&amp;D Tokyo</p>
-          </div>
-          <div class="h-dot" style="border-color:#7a0f3d"></div>
-        </div>
-        <div class="h-item below">
-          <div class="h-dot" style="border-color:#d4537a"></div>
-          <div class="h-card" style="--card-accent:#d4537a">
-            <p class="h-date">Aug 2025 – Present</p>
-            <p class="h-role">Behaviour Planning Engineer</p>
-            <p class="h-location">Tokyo, Japan</p>
-            <p class="h-org">Applied Intuition</p>
+        <div class="tl-item below" style="--x:88%; --dot:#d4537a">
+          <span class="tl-dot"></span>
+          <div class="tl-card">
+            <p class="tl-date">Aug 2025 – Present</p>
+            <p class="tl-role">Behaviour Planning Engineer</p>
+            <p class="tl-org">Applied Intuition</p>
+            <p class="tl-loc">Tokyo, Japan</p>
           </div>
         </div>
       </div>
@@ -198,75 +195,40 @@
     </div>
 
     <div class="bg-panel" id="panel-education" role="tabpanel" aria-labelledby="tab-education" hidden>
-      <div class="bar-timeline">
-        <div class="bar-lanes">
-          <div class="bar-track" aria-hidden="true">
-            <div class="bar-seg" style="--bar-color:#a8134e; --bar-start:0; --bar-end:0.44"></div>
+      <div class="tl">
+        <div class="tl-item above" style="--x:18%; --dot:#a8134e">
+          <div class="tl-card">
+            <p class="tl-date">2017 – 2021</p>
+            <p class="tl-role">B.Tech + Control Diploma</p>
+            <p class="tl-org">IIT Bombay</p>
+            <p class="tl-loc">Mumbai, India</p>
           </div>
-          <div class="bar-track" aria-hidden="true">
-            <div class="bar-seg" style="--bar-color:#c41e6a; --bar-start:0; --bar-end:0.44"></div>
-          </div>
-          <div class="bar-track" aria-hidden="true">
-            <div class="bar-seg" style="--bar-color:#7a0f3d; --bar-start:0.44; --bar-end:0.56"></div>
-          </div>
-          <div class="bar-track" aria-hidden="true">
-            <div class="bar-seg" style="--bar-color:#d4537a; --bar-start:0.89; --bar-end:1"></div>
+          <span class="tl-dot"></span>
+        </div>
+        <div class="tl-item below" style="--x:52%; --dot:#7a0f3d">
+          <span class="tl-dot"></span>
+          <div class="tl-card">
+            <p class="tl-date">2021 – 2022</p>
+            <p class="tl-role">M.Tech · Process Systems</p>
+            <p class="tl-org">IIT Bombay</p>
+            <p class="tl-loc">Mumbai, India</p>
           </div>
         </div>
-        <div class="bar-labels">
-          <span>2017</span><span>2019</span><span>2021</span><span>2023</span><span>2025</span><span>2026</span>
-        </div>
-      </div>
-      <div class="h-timeline bar-cards edu-cards">
-        <div class="h-item above">
-          <div class="h-card" style="--card-accent:#a8134e">
-            <p class="h-date">2017 – 2021</p>
-            <p class="h-role">B.Tech</p>
-            <p class="h-location">Mumbai, India</p>
-            <p class="h-org">IIT Bombay · Energy Science &amp; Systems Eng.</p>
+        <div class="tl-item above" style="--x:86%; --dot:#d4537a">
+          <div class="tl-card">
+            <p class="tl-date">Incoming</p>
+            <p class="tl-role">MS Robotics</p>
+            <p class="tl-org">Carnegie Mellon University</p>
+            <p class="tl-loc">Pittsburgh, USA</p>
           </div>
-          <div class="h-dot" style="border-color:#a8134e"></div>
-        </div>
-        <div class="h-item below">
-          <div class="h-dot" style="border-color:#c41e6a"></div>
-          <div class="h-card" style="--card-accent:#c41e6a">
-            <p class="h-date">2017 – 2021</p>
-            <p class="h-role">Minor / Diploma</p>
-            <p class="h-location">Mumbai, India</p>
-            <p class="h-org">IIT Bombay · Systems &amp; Control Engineering</p>
-          </div>
-        </div>
-        <div class="h-item above">
-          <div class="h-card" style="--card-accent:#7a0f3d">
-            <p class="h-date">2021 – 2022</p>
-            <p class="h-role">M.Tech</p>
-            <p class="h-location">Mumbai, India</p>
-            <p class="h-org">IIT Bombay · Process Systems Engineering</p>
-          </div>
-          <div class="h-dot" style="border-color:#7a0f3d"></div>
-        </div>
-        <div class="h-item below">
-          <div class="h-dot" style="border-color:#d4537a"></div>
-          <div class="h-card" style="--card-accent:#d4537a">
-            <p class="h-date">Incoming</p>
-            <p class="h-role">MS Robotics</p>
-            <p class="h-location">Pittsburgh, USA</p>
-            <p class="h-org">Carnegie Mellon University</p>
-          </div>
+          <span class="tl-dot"></span>
         </div>
       </div>
       <div class="v-timeline v-bar-list">
         <div class="v-item" style="--bar-color:#a8134e">
           <div class="v-date">2017 – 2021</div>
           <div>
-            <p class="v-role">B.Tech — Energy Science and Systems Engineering</p>
-            <p class="v-location">Mumbai, India · IIT Bombay</p>
-          </div>
-        </div>
-        <div class="v-item" style="--bar-color:#c41e6a">
-          <div class="v-date">2017 – 2021</div>
-          <div>
-            <p class="v-role">Diploma — Systems and Control Engineering</p>
+            <p class="v-role">B.Tech — Energy Science &amp; Systems Eng. + Systems &amp; Control Diploma</p>
             <p class="v-location">Mumbai, India · IIT Bombay</p>
           </div>
         </div>
