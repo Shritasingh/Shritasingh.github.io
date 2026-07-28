@@ -101,26 +101,9 @@
     if (!axisRow) return;
 
     const drawLinks = () => {
-      const axisY = axisRow.offsetTop + axisRow.offsetHeight / 2;
       svgEl.setAttribute('width', String(width));
       svgEl.setAttribute('height', String(stage.offsetHeight));
       svgEl.innerHTML = '';
-      placed.forEach((p) => {
-        const cardX = p.midPx;
-        const cardY = p.isAbove
-          ? p.wrap.offsetTop + p.wrap.offsetHeight
-          : p.wrap.offsetTop;
-        const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-        line.setAttribute('x1', String(cardX));
-        line.setAttribute('y1', String(cardY));
-        line.setAttribute('x2', String(cardX));
-        line.setAttribute('y2', String(axisY));
-        line.setAttribute('stroke', p.entry.color);
-        line.setAttribute('stroke-width', '1.5');
-        line.setAttribute('stroke-opacity', '0.5');
-        line.setAttribute('stroke-dasharray', '4 3');
-        svgEl.appendChild(line);
-      });
     };
 
     drawLinks();
