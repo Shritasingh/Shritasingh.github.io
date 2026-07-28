@@ -355,44 +355,62 @@ h2.section-title{
 .bg-panel.active{display:block;}
 
 .tl{
-  display:flex;
-  flex-direction:column;
-  gap:16px;
-  margin:12px 0 8px;
-}
-.tl-item{
   position:relative;
   width:100%;
-  left:auto;
-  transform:none;
-  z-index:auto;
-  display:flex;
-  flex-direction:column;
+  height:330px;
+  margin:12px 0 8px;
 }
-.tl-item.above,
-.tl-item.below{top:auto; bottom:auto;}
+.tl::before{
+  content:"";
+  position:absolute;
+  left:0; right:0;
+  top:50%;
+  height:2px;
+  background:var(--line);
+  z-index:0;
+}
+.tl-item{
+  position:absolute;
+  width:260px;
+  left:var(--x);
+  transform:translateX(-50%);
+  z-index:1;
+}
+.tl-item.above{bottom:calc(50% + 22px);}
+.tl-item.below{top:calc(50% + 22px);}
 .tl-item::after{
-  content:none;
+  content:"";
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  width:2px;
+  height:26px;
+  background:var(--dot, var(--purple));
+  opacity:0.55;
 }
+.tl-item.above::after{bottom:-26px;}
+.tl-item.below::after{top:-26px;}
 .tl-segment{
-  order:2;
-  width:max(calc(var(--end) - var(--start)), 42px);
-  height:7px;
+  position:absolute;
+  left:var(--start);
+  width:calc(var(--end) - var(--start));
+  height:6px;
   border-radius:999px;
-  background:linear-gradient(90deg, var(--dot, var(--purple)), rgba(255,255,255,0.9));
-  box-shadow:0 1px 4px rgba(26,35,50,0.10);
-  margin:10px 0 0 58px;
+  background:linear-gradient(90deg, var(--dot, var(--purple)), color-mix(in srgb, var(--dot, var(--purple)) 60%, white));
+  box-shadow:0 1px 4px rgba(26,35,50,0.12);
 }
+.tl-item.above .tl-segment{bottom:-41px;}
+.tl-item.below .tl-segment{top:-41px;}
 .tl-card-head{
   display:grid;
-  grid-template-columns:44px 1fr;
-  gap:14px;
+  grid-template-columns:40px 1fr;
+  gap:12px;
   align-items:start;
 }
 .tl-logo{
   position:static;
   left:auto;
-  width:44px; height:44px;
+  width:40px; height:40px;
   border-radius:10px;
   background:#fff;
   border:2px solid var(--dot, var(--purple));
@@ -403,12 +421,11 @@ h2.section-title{
   box-shadow:0 2px 10px rgba(26,35,50,0.08);
 }
 .tl-card{
-  order:1;
   background:rgba(250,250,250,0.96);
   border:1px solid var(--line);
-  border-left:4px solid var(--dot, var(--purple));
+  border-top:3px solid var(--dot, var(--purple));
   border-radius:14px;
-  padding:16px 16px 14px;
+  padding:14px 12px 12px;
   box-shadow:0 4px 20px rgba(26,35,50,0.06);
   text-align:left;
 }
