@@ -67,7 +67,13 @@ header.nav{
   display:inline-flex; align-items:center; gap:6px;
 }
 .nav-links a:hover,
-.nav-links a.active{color:var(--text); text-decoration:none; font-weight:500;}
+.nav-links a.active{
+  color:#fff;
+  background:linear-gradient(90deg, var(--blue), var(--purple));
+  text-decoration:none;
+  font-weight:500;
+  box-shadow:0 2px 10px rgba(124,58,237,0.18);
+}
 .nav-home-icon{
   display:inline-block;
   flex-shrink:0;
@@ -114,12 +120,12 @@ h1.name{
   display:block; margin:0 auto 10px;
 }
 .contact-row{
-  display:flex; flex-wrap:nowrap; gap:4px; justify-content:center;
+  display:flex; flex-wrap:nowrap; gap:2px; justify-content:center;
   margin:0;
 }
 .contact-row a{
   font-size:16px; font-weight:600; color:#4a5568;
-  padding:8px 18px; border-radius:999px; background:#f3f4f6;
+  padding:8px 14px; border-radius:999px; background:#f3f4f6;
 }
 .contact-row a:hover{color:var(--accent); text-decoration:none;}
 
@@ -248,7 +254,7 @@ h2.section-title{
 }
 .bg-tab:hover{color:var(--text); border-color:#ccc;}
 .bg-tab.active{
-  background:linear-gradient(90deg, var(--blue), var(--purple));
+  background:linear-gradient(90deg, var(--blue), var(--purple), var(--pink));
   color:#fff; border-color:transparent;
   box-shadow:0 2px 12px rgba(124,58,237,0.25);
 }
