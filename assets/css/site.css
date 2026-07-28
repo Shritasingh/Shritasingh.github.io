@@ -15,6 +15,15 @@
   --maxw:1100px;
 }
 
+[data-theme="dark"]{
+  --bg:#0b1020;
+  --text:#eef2ff;
+  --muted:#b8c0d9;
+  --line:#25304a;
+  --accent:#a78bfa;
+  --accent-soft:#241b46;
+}
+
 *{box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{
@@ -81,6 +90,57 @@ header.nav{
 }
 .nav-toggle{display:none; background:none; border:none; cursor:pointer; padding:4px;}
 .nav-toggle span{display:block; width:20px; height:2px; background:var(--text); margin:4px 0;}
+
+.theme-toggle{
+  border:1px solid var(--line);
+  background:#f3f4f6;
+  color:var(--muted);
+  border-radius:999px;
+  padding:6px 10px;
+  font:inherit;
+  font-size:12px;
+  cursor:pointer;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+}
+.theme-toggle:hover{color:var(--text);}
+.theme-toggle .theme-toggle-light,
+.theme-toggle .theme-toggle-dark{line-height:1;}
+[data-theme="light"] .theme-toggle-dark{opacity:0.45;}
+[data-theme="dark"] .theme-toggle-light{opacity:0.45;}
+[data-theme="dark"] body{background:var(--bg); color:var(--text);}
+[data-theme="dark"] header.nav{background:rgba(11,16,32,0.92);}
+[data-theme="dark"] .nav-links,
+[data-theme="dark"] .theme-toggle,
+[data-theme="dark"] .contact-row a,
+[data-theme="dark"] .pub-thumb,
+[data-theme="dark"] .pub-links a,
+[data-theme="dark"] .bg-tab,
+[data-theme="dark"] .tl-card,
+[data-theme="dark"] .v-bar-list .v-item img,
+[data-theme="dark"] .cv-frame{
+  background:#12182b;
+}
+[data-theme="dark"] .pub-thumb,
+[data-theme="dark"] .cv-frame,
+[data-theme="dark"] .tl-card,
+[data-theme="dark"] .theme-toggle{border-color:var(--line);}
+[data-theme="dark"] .bio p,
+[data-theme="dark"] .pub-tldr,
+[data-theme="dark"] .project-desc,
+[data-theme="dark"] .entry p,
+[data-theme="dark"] .tl-org,
+[data-theme="dark"] .v-location,
+[data-theme="dark"] .page-lead{color:#d6ddf2;}
+[data-theme="dark"] .nav-links a{color:var(--muted);}
+[data-theme="dark"] .nav-links a.active{color:#fff;}
+[data-theme="dark"] .contact-row a,
+[data-theme="dark"] .pub-links a,
+[data-theme="dark"] .theme-toggle{color:#d6ddf2;}
+[data-theme="dark"] .tl-logo{background:#12182b;}
+[data-theme="dark"] footer{color:var(--muted);}
+
 
 @media (max-width:720px){
   .nav-links{
