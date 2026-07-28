@@ -21,6 +21,7 @@
     <ul class="nav-links" id="navLinks">
       <li><a class="active" href="index.html"><svg class="nav-home-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5L12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg> home</a></li>
       <li><a href="publications.html">publications</a></li>
+      <li><a href="experience.html">experience</a></li>
       <li><a href="projects.html">projects</a></li>
       <li><a href="volunteering.html">volunteering</a></li>
       <li><a href="blog.html">blog</a></li>
@@ -37,44 +38,42 @@
         <div class="bio">
           <p>
             I'm an incoming student in the <strong>Master of Science in Robotics</strong> program at
-            Carnegie Mellon University, where I plan to focus on robot learning, motion planning, world
-            models, and end-to-end approaches to robot behavior — with an eye toward both the research
-            and the applied, entrepreneurial sides of the field.
+            Carnegie Mellon University, where I plan to focus on robot learning, motion planning, and
+            end-to-end approaches to robot behavior — with an eye toward both the research and
+            entrepreneurial sides of the field.
+          </p>
+          <p>
+            At <strong>IIT Bombay</strong>, my research centered on data-driven modeling, adaptive model
+            predictive control, optimal control, and system identification. This work was recognized by
+            two awards, including the R.G. Manudhane Student Excellence Award and an Undergraduate Research Award.
           </p>
           <p>
             Most recently I was a Behaviour Planning Engineer on the trucking autonomy team at
             <strong>Applied Intuition</strong> in Tokyo, and before that an AI Researcher at
             <strong>Honda R&amp;D Tokyo</strong>, working on cooperative behaviour planning for
-            Honda's next-generation self-driving vehicles. I hold a dual degree from
-            <strong>IIT Bombay</strong>, where my Master's thesis received the R.G. Manudhane
-            Student Excellence Award.
+            Honda's next-generation self-driving vehicles.
           </p>
         </div>
       </div>
       <aside class="profile-col">
-        <img src="assets/img/profile.jpg" alt="Portrait of Shrita Singh">
+        <img class="profile-photo" src="assets/img/profile.jpg" alt="Portrait of Shrita Singh">
         <div class="contact-row">
           <a href="mailto:shritasingh2000@gmail.com">email</a>
           <a href="https://www.linkedin.com/in/shrita-singh-0b3a4b161" target="_blank" rel="noopener">linkedin</a>
           <a href="assets/pdf/CV_shrita.pdf" target="_blank" rel="noopener">cv</a>
         </div>
-        <p class="profile-meta">
-          <strong>MS Robotics (incoming)</strong>
-          Carnegie Mellon University<br>
-          Robotics · Motion Planning · Learning
-        </p>
       </aside>
     </div>
   </section>
 
   <section id="publications">
     <div class="section-head">
-      <h2 class="section-title">selected publications</h2>
+      <h2 class="section-title">Selected publications</h2>
       <a class="section-link" href="publications.html">all publications →</a>
     </div>
     <div class="pub-tiles">
       <article class="pub-tile">
-        <img class="pub-thumb" src="assets/img/pubs/iekf.svg" alt="">
+        <img class="pub-thumb cover" src="assets/img/pubs/iekf.jpg" alt="Figure from ARMAX / IEKF estimation research">
         <div>
           <span class="pub-badge">First author</span>
           <h3>Development of Block Iterated Extended Kalman Filter for Recursive Estimation of ARMAX Model Parameters</h3>
@@ -87,7 +86,7 @@
         </div>
       </article>
       <article class="pub-tile">
-        <img class="pub-thumb" src="assets/img/pubs/armax.svg" alt="">
+        <img class="pub-thumb cover" src="assets/img/pubs/armax.jpg" alt="First page of IFAC DYCOPS 2022 paper">
         <div>
           <span class="pub-badge">First author</span>
           <h3>Development of Block Oriented Recursive and Constrained Parameter Estimation Schemes for ARMAX Models</h3>
@@ -101,7 +100,7 @@
         </div>
       </article>
       <article class="pub-tile">
-        <img class="pub-thumb" src="assets/img/pubs/nanosat.svg" alt="">
+        <img class="pub-thumb cover" src="assets/img/pubs/nanosat.jpg" alt="CubeSat in orbit (NASA)">
         <div>
           <span class="pub-badge">Co-author</span>
           <h3>Closed Loop Simulation for Attitude Control of Nano-Satellite</h3>
@@ -113,9 +112,44 @@
     </div>
   </section>
 
+  <section id="experience">
+    <div class="section-head">
+      <h2 class="section-title">Experience</h2>
+      <a class="section-link" href="experience.html">all experience →</a>
+    </div>
+    <div class="pub-tiles">
+      <article class="pub-tile">
+        <img class="pub-thumb" src="assets/img/work/applied-tile.jpg" alt="Applied Intuition logo">
+        <div>
+          <span class="pub-badge">Current</span>
+          <h3>Behaviour Planning Engineer</h3>
+          <p class="pub-venue">Applied Intuition · Tokyo · Aug 2025 – Present</p>
+          <p class="pub-tldr">End-to-end behaviour planning for autonomous trucking on the trucking autonomy team — simulation, on-road validation, and planning under real traffic constraints.</p>
+          <div class="pub-links">
+            <a href="https://www.appliedintuition.com/" target="_blank" rel="noopener">Company</a>
+            <a href="experience.html">Details</a>
+          </div>
+        </div>
+      </article>
+      <article class="pub-tile">
+        <img class="pub-thumb" src="assets/img/work/honda-tile.jpg" alt="Honda logo">
+        <div>
+          <span class="pub-badge">Previous</span>
+          <h3>AI Researcher</h3>
+          <p class="pub-venue">Honda R&amp;D Tokyo · Oct 2022 – Aug 2025</p>
+          <p class="pub-tldr">Cooperative behaviour planning and prediction for level-3+ autonomy — path refinement, stop-line MPC, and multi-agent negotiation in highway and urban settings.</p>
+          <div class="pub-links">
+            <a href="https://www.hondarandd.jp/" target="_blank" rel="noopener">Honda R&amp;D</a>
+            <a href="experience.html">Details</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
   <section id="background">
     <div class="section-head">
-      <h2 class="section-title">background</h2>
+      <h2 class="section-title">Background</h2>
     </div>
 
     <div class="bg-toggle" role="tablist" aria-label="Background">
@@ -124,18 +158,18 @@
     </div>
 
     <div class="bg-panel active" id="panel-work" role="tabpanel" aria-labelledby="tab-work">
-      <div class="tl" aria-hidden="false">
-        <div class="tl-item above" style="--x:12%; --dot:#a8134e">
+      <div class="tl">
+        <div class="tl-item above" style="--x:12%; --dot:#2563eb">
           <div class="tl-card">
             <p class="tl-date">May – Jul 2020</p>
             <p class="tl-role">Junior Data Scientist</p>
             <p class="tl-org">Capgemini SE</p>
             <p class="tl-loc">Bangalore, India</p>
           </div>
-          <span class="tl-dot"></span>
+          <img class="tl-logo" src="assets/img/org/capgemini-icon.png" alt="Capgemini">
         </div>
-        <div class="tl-item below" style="--x:32%; --dot:#c41e6a">
-          <span class="tl-dot"></span>
+        <div class="tl-item below" style="--x:32%; --dot:#7c3aed">
+          <img class="tl-logo" src="assets/img/org/abb-icon.png" alt="ABB">
           <div class="tl-card">
             <p class="tl-date">Jun – Aug 2021</p>
             <p class="tl-role">R&amp;D Intern</p>
@@ -143,17 +177,17 @@
             <p class="tl-loc">Bangalore, India</p>
           </div>
         </div>
-        <div class="tl-item above" style="--x:62%; --dot:#7a0f3d">
+        <div class="tl-item above" style="--x:62%; --dot:#a855f7">
           <div class="tl-card">
             <p class="tl-date">Oct 2022 – Aug 2025</p>
             <p class="tl-role">AI Researcher</p>
             <p class="tl-org">Honda R&amp;D Tokyo</p>
             <p class="tl-loc">Tokyo, Japan</p>
           </div>
-          <span class="tl-dot"></span>
+          <img class="tl-logo" src="assets/img/org/honda-icon.png" alt="Honda">
         </div>
-        <div class="tl-item below" style="--x:88%; --dot:#d4537a">
-          <span class="tl-dot"></span>
+        <div class="tl-item below" style="--x:88%; --dot:#ec4899">
+          <img class="tl-logo" src="assets/img/org/applied-icon.png" alt="Applied Intuition">
           <div class="tl-card">
             <p class="tl-date">Aug 2025 – Present</p>
             <p class="tl-role">Behaviour Planning Engineer</p>
@@ -163,28 +197,32 @@
         </div>
       </div>
       <div class="v-timeline v-bar-list">
-        <div class="v-item" style="--bar-color:#a8134e">
+        <div class="v-item" style="--bar-color:#2563eb">
+          <img src="assets/img/org/capgemini-icon.png" alt="">
           <div class="v-date">May – Jul 2020</div>
           <div>
             <p class="v-role">Junior Data Scientist</p>
             <p class="v-location">Bangalore, India · Capgemini SE</p>
           </div>
         </div>
-        <div class="v-item" style="--bar-color:#c41e6a">
+        <div class="v-item" style="--bar-color:#7c3aed">
+          <img src="assets/img/org/abb-icon.png" alt="">
           <div class="v-date">Jun – Aug 2021</div>
           <div>
             <p class="v-role">R&amp;D Intern</p>
             <p class="v-location">Bangalore, India · ABB Corporate Research</p>
           </div>
         </div>
-        <div class="v-item" style="--bar-color:#7a0f3d">
+        <div class="v-item" style="--bar-color:#a855f7">
+          <img src="assets/img/org/honda-icon.png" alt="">
           <div class="v-date">Oct 2022 – Aug 2025</div>
           <div>
             <p class="v-role">AI Researcher</p>
             <p class="v-location">Tokyo, Japan · Honda R&amp;D Tokyo</p>
           </div>
         </div>
-        <div class="v-item" style="--bar-color:#d4537a">
+        <div class="v-item" style="--bar-color:#ec4899">
+          <img src="assets/img/org/applied-icon.png" alt="">
           <div class="v-date">Aug 2025 – Present</div>
           <div>
             <p class="v-role">Behaviour Planning Engineer</p>
@@ -196,17 +234,17 @@
 
     <div class="bg-panel" id="panel-education" role="tabpanel" aria-labelledby="tab-education" hidden>
       <div class="tl">
-        <div class="tl-item above" style="--x:18%; --dot:#a8134e">
+        <div class="tl-item above" style="--x:18%; --dot:#2563eb">
           <div class="tl-card">
             <p class="tl-date">2017 – 2021</p>
             <p class="tl-role">B.Tech + Control Diploma</p>
             <p class="tl-org">IIT Bombay</p>
             <p class="tl-loc">Mumbai, India</p>
           </div>
-          <span class="tl-dot"></span>
+          <img class="tl-logo" src="assets/img/org/iitb-icon.png" alt="IIT Bombay">
         </div>
-        <div class="tl-item below" style="--x:52%; --dot:#7a0f3d">
-          <span class="tl-dot"></span>
+        <div class="tl-item below" style="--x:52%; --dot:#7c3aed">
+          <img class="tl-logo" src="assets/img/org/iitb-icon.png" alt="IIT Bombay">
           <div class="tl-card">
             <p class="tl-date">2021 – 2022</p>
             <p class="tl-role">M.Tech · Process Systems</p>
@@ -214,32 +252,35 @@
             <p class="tl-loc">Mumbai, India</p>
           </div>
         </div>
-        <div class="tl-item above" style="--x:86%; --dot:#d4537a">
+        <div class="tl-item above" style="--x:86%; --dot:#ec4899">
           <div class="tl-card">
             <p class="tl-date">Incoming</p>
             <p class="tl-role">MS Robotics</p>
             <p class="tl-org">Carnegie Mellon University</p>
             <p class="tl-loc">Pittsburgh, USA</p>
           </div>
-          <span class="tl-dot"></span>
+          <img class="tl-logo" src="assets/img/org/cmu-icon.png" alt="CMU">
         </div>
       </div>
       <div class="v-timeline v-bar-list">
-        <div class="v-item" style="--bar-color:#a8134e">
+        <div class="v-item" style="--bar-color:#2563eb">
+          <img src="assets/img/org/iitb-icon.png" alt="">
           <div class="v-date">2017 – 2021</div>
           <div>
             <p class="v-role">B.Tech — Energy Science &amp; Systems Eng. + Systems &amp; Control Diploma</p>
             <p class="v-location">Mumbai, India · IIT Bombay</p>
           </div>
         </div>
-        <div class="v-item" style="--bar-color:#7a0f3d">
+        <div class="v-item" style="--bar-color:#7c3aed">
+          <img src="assets/img/org/iitb-icon.png" alt="">
           <div class="v-date">2021 – 2022</div>
           <div>
             <p class="v-role">M.Tech — Process Systems Engineering</p>
             <p class="v-location">Mumbai, India · IIT Bombay</p>
           </div>
         </div>
-        <div class="v-item" style="--bar-color:#d4537a">
+        <div class="v-item" style="--bar-color:#ec4899">
+          <img src="assets/img/org/cmu-icon.png" alt="">
           <div class="v-date">Incoming</div>
           <div>
             <p class="v-role">MS Robotics</p>
@@ -251,7 +292,15 @@
   </section>
 
   <footer>
-    <p>shritasingh2000@gmail.com &nbsp;·&nbsp; <a href="assets/pdf/CV_shrita.pdf">cv</a> &nbsp;·&nbsp; © 2026 Shrita Singh</p>
+    <p>
+      <span class="footer-name">Shrita Singh</span>
+      &nbsp;·&nbsp;
+      <span class="footer-affil">IIT Bombay</span>
+      &nbsp;·&nbsp;
+      <span class="footer-affil">Carnegie Mellon University</span>
+      &nbsp;·&nbsp;
+      © 2026
+    </p>
   </footer>
 </div>
 

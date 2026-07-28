@@ -1,8 +1,0 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
-  <rect width="640" height="360" fill="#f7f7f7"/>
-  <path d="M80 260 C180 260 220 120 320 120 C420 120 460 260 560 260" stroke="#a8134e" stroke-width="4" fill="none"/>
-  <circle cx="200" cy="200" r="28" fill="none" stroke="#7a0f3d" stroke-width="3" stroke-dasharray="6 4"/>
-  <circle cx="420" cy="180" r="22" fill="#fbe6ef" stroke="#a8134e" stroke-width="2"/>
-  <path d="M320 120 L360 90 L340 120" fill="#a8134e"/>
-  <text x="40" y="330" font-family="Georgia, serif" font-size="18" fill="#212121">Path Refinement · Obstacle Avoidance</text>
-</svg>
