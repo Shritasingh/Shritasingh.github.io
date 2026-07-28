@@ -18,7 +18,12 @@
 
   const applyTheme = (theme) => {
     document.documentElement.setAttribute('data-theme', theme);
-    if (themeToggle) themeToggle.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
+    if (themeToggle) {
+      const isDark = theme === 'dark';
+      themeToggle.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+      themeToggle.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+      themeToggle.setAttribute('title', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+    }
   };
 
   if (themeToggle) {
