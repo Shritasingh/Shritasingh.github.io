@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects · Shrita Singh</title>
+<meta name="description" content="Selected projects by Shrita Singh.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,600;1,400&family=Roboto:wght@300;400;500;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="nav-name" href="index.html">shrita singh</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">home</a></li>
+      <li><a href="publications.html">publications</a></li>
+      <li><a class="active" href="projects.html">projects</a></li>
+      <li><a href="cv.html">cv</a></li>
+      <li><a href="volunteering.html">volunteering</a></li>
+      <li><a href="blog.html">blog</a></li>
+    </ul>
+  </div>
+</header>
+
+<div class="wrap">
+  <h1 class="page-title">Projects</h1>
+  <p class="page-lead">Selected technical projects spanning satellites, optimal control, and modeling.</p>
+
+  <div class="project-list">
+    <div class="project">
+      <p class="project-title">Advitiy Nano-Satellite</p>
+      <p class="project-meta">Student Satellite Team, Attitude Determination &amp; Control · IIT Bombay · 2018–2019</p>
+      <p class="project-desc">Built a modular simulation framework for satellite dynamics and environment for controller testing, validated a PID controller via on-board in-loop simulation on Arduino, and modeled orbital solar power for the CubeSat's electrical budget.</p>
+    </div>
+
+    <div class="project">
+      <p class="project-title">Optimal Control of a Plug-in Hybrid Vehicle</p>
+      <p class="project-meta">Prof. Ravi N. Banavar, IIT Bombay · 2019</p>
+      <p class="project-desc">Formulated an optimal control problem minimizing fuel consumption for a given position/speed profile, built a modular closed-loop Simulink simulator across driving cycles and road grades, and solved the OCP via multiple shooting and Pontryagin's Maximum Principle.</p>
+    </div>
+
+    <div class="project">
+      <p class="project-title">Data-Driven Dynamic Modelling Algorithms</p>
+      <p class="project-meta">Process Systems Engineering · IIT Bombay</p>
+      <p class="project-desc">Developed discrete-time black-box models using stochastic processes and parameter estimation via optimization; implemented recursive parameter updates for ARX, OE, and ARMAX models, and extended them to block-data updates of parameters and covariance.</p>
+    </div>
+
+    <div class="project">
+      <p class="project-title">Model Predictive Control of a Reactor System</p>
+      <p class="project-meta">Process Control · IIT Bombay</p>
+      <p class="project-desc">Designed and simulated an MPC for a nonlinear CSTR to track concentration and temperature setpoints under input constraints, with state estimation and innovation-bias correction for model–plant mismatch.</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>shritasingh2000@gmail.com &nbsp;·&nbsp; <a href="assets/pdf/CV_shrita.pdf">cv</a> &nbsp;·&nbsp; © 2026 Shrita Singh</p>
+  </footer>
+</div>
+
+<script src="assets/js/nav.js"></script>
+</body>
+</html>

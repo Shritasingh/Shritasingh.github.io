@@ -8,229 +8,33 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,600;1,400&family=Roboto:wght@300;400;500;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --bg:#fdfdfd;
-    --surface:#ffffff;
-    --text:#212121;
-    --text-muted:#6c6c6c;
-    --line:#e0e0e0;
-    --accent:#a8134e;
-    --accent-soft:#fbe6ef;
-    --serif:"Noto Serif", Georgia, serif;
-    --sans:"Roboto", Helvetica, Arial, sans-serif;
-    --mono:"Roboto Mono", ui-monospace, monospace;
-    --maxw:800px;
-  }
-
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    margin:0;
-    background:var(--bg);
-    color:var(--text);
-    font-family:var(--sans);
-    font-weight:300;
-    font-size:16px;
-    line-height:1.7;
-    -webkit-font-smoothing:antialiased;
-  }
-
-  a{color:var(--accent); text-decoration:none;}
-  a:hover{text-decoration:underline;}
-  a:focus-visible, button:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
-
-  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 24px;}
-
-  /* ---------- Nav ---------- */
-  header.nav{
-    background:var(--surface);
-    border-bottom:1px solid var(--line);
-    position:sticky; top:0; z-index:20;
-  }
-  .nav-inner{
-    max-width:var(--maxw); margin:0 auto; padding:16px 24px;
-    display:flex; align-items:center; justify-content:space-between;
-  }
-  .nav-name{
-    font-family:var(--sans); font-weight:500; font-size:15px; letter-spacing:0.03em;
-    color:var(--text); text-transform:lowercase;
-  }
-  .nav-links{display:flex; gap:26px; list-style:none; margin:0; padding:0;}
-  .nav-links a{
-    color:var(--text-muted); font-size:13px; font-weight:400;
-    text-transform:lowercase; letter-spacing:0.04em;
-  }
-  .nav-links a:hover{color:var(--accent); text-decoration:none;}
-  .nav-toggle{display:none; background:none; border:none; cursor:pointer; padding:4px;}
-  .nav-toggle span{display:block; width:20px; height:2px; background:var(--text); margin:4px 0;}
-
-  @media (max-width:640px){
-    .nav-links{
-      position:absolute; top:100%; left:0; right:0;
-      flex-direction:column; gap:0;
-      background:var(--surface);
-      border-bottom:1px solid var(--line);
-      max-height:0; overflow:hidden;
-      transition:max-height 0.25s ease;
-    }
-    .nav-links.open{max-height:400px;}
-    .nav-links a{display:block; padding:12px 24px; border-top:1px solid var(--line);}
-    .nav-toggle{display:block;}
-  }
-
-  /* ---------- Hero (al-folio "about" style) ---------- */
-  .hero{padding:48px 0 8px;}
-  .hero-grid{
-    display:grid; grid-template-columns:1fr 160px; gap:36px; align-items:start;
-  }
-  .hero-photo img{
-    width:160px; height:160px; object-fit:cover;
-    border:1px solid var(--line); border-radius:2px;
-  }
-  h1.name{
-    font-family:var(--serif); font-weight:600; font-size:32px; margin:0 0 18px; line-height:1.2;
-  }
-  .bio p{margin:0 0 16px; font-size:15px; color:#333; font-weight:300;}
-  .bio strong{font-weight:500; color:var(--text);}
-
-  .contact-row{
-    display:flex; flex-wrap:wrap; gap:14px; margin:4px 0 28px;
-  }
-  .contact-row a{
-    font-size:13px; font-weight:400; color:var(--accent);
-    border-bottom:1px solid transparent;
-  }
-  .contact-row a:hover{border-bottom-color:var(--accent); text-decoration:none;}
-
-  @media (max-width:640px){
-    .hero-grid{grid-template-columns:1fr;}
-    .hero-photo{order:-1; margin-bottom:18px;}
-    .hero-photo img{width:110px; height:110px;}
-  }
-
-  /* ---------- Sections (al-folio style: small-caps label + hairline rule) ---------- */
-  section{padding:34px 0 6px;}
-  .section-head{
-    border-bottom:1px solid var(--line);
-    margin-bottom:24px; padding-bottom:6px;
-    display:flex; align-items:baseline; justify-content:space-between;
-  }
-  h2.section-title{
-    font-family:var(--sans); font-weight:500; font-size:13px; margin:0;
-    text-transform:uppercase; letter-spacing:0.14em; color:var(--text);
-  }
-  .section-count{font-family:var(--mono); font-size:11px; color:var(--text-muted);}
-
-  /* ---------- Background timeline: horizontal, alternating above/below ---------- */
-  .h-timeline{
-    position:relative;
-    display:flex;
-    padding:10px 0;
-    margin:20px 0 10px;
-  }
-  .h-timeline::before{
-    content:"";
-    position:absolute; left:0; right:0; top:50%;
-    height:1px; background:var(--line);
-  }
-  .h-item{
-    flex:1; position:relative; min-height:190px;
-  }
-  .h-item:first-child{flex:0.6;}
-  .h-item:last-child{flex:0.6;}
-  .h-dot{
-    position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
-    width:9px; height:9px; border-radius:50%;
-    background:var(--bg); border:2px solid var(--accent); z-index:2;
-  }
-  .h-content{
-    position:absolute; left:50%; transform:translateX(-50%);
-    width:150px; text-align:center;
-  }
-  .h-item.above .h-content{bottom:calc(50% + 18px);}
-  .h-item.below .h-content{top:calc(50% + 18px);}
-  .h-date{
-    font-family:var(--mono); font-size:11px; color:var(--accent); white-space:nowrap; margin:0 0 4px;
-  }
-  .h-role{font-weight:500; font-size:13.5px; margin:0; color:var(--text); line-height:1.3;}
-  .h-org{color:var(--text-muted); font-size:12px; margin:2px 0 0; font-style:italic;}
-  .h-desc{color:#4a4a4a; font-size:12px; margin:5px 0 0; line-height:1.4; font-weight:300;}
-
-  /* Vertical fallback for narrow screens */
-  .v-timeline{display:none; flex-direction:column; gap:20px;}
-  @media (max-width:760px){
-    .h-timeline{display:none;}
-    .v-timeline{display:flex;}
-    .v-item{display:grid; grid-template-columns:100px 1fr; gap:14px;}
-    .v-date{font-family:var(--mono); font-size:11.5px; color:var(--accent); white-space:nowrap;}
-    .v-role{font-weight:500; font-size:14.5px; margin:0; color:var(--text);}
-    .v-org{color:var(--text-muted); font-size:12.5px; margin:2px 0 0; font-style:italic;}
-    .v-desc{color:#4a4a4a; font-size:12.5px; margin:4px 0 0; line-height:1.4; font-weight:300;}
-  }
-
-  /* ---------- Numbered lists (patents / publications, al-folio pub-list style) ---------- */
-  .num-list{list-style:none; counter-reset:pub; margin:0; padding:0;}
-  .num-item{
-    counter-increment:pub;
-    display:grid; grid-template-columns:28px 1fr; gap:10px;
-    padding:16px 0; border-bottom:1px solid var(--line);
-  }
-  .num-item:last-child{border-bottom:none;}
-  .num-item::before{
-    content:counter(pub) ".";
-    font-family:var(--mono); font-size:13px; color:var(--accent); font-weight:500;
-  }
-  .num-title{font-weight:500; font-size:14.5px; line-height:1.45; margin:0 0 4px;}
-  .num-authors{font-size:13px; color:var(--text-muted); margin:0 0 3px;}
-  .num-authors .me{font-style:italic; color:var(--text);}
-  .num-venue{font-size:12.5px; color:var(--accent); font-family:var(--mono);}
-
-  /* ---------- Projects ---------- */
-  .project-list{display:flex; flex-direction:column; gap:22px;}
-  .project{padding-bottom:22px; border-bottom:1px solid var(--line);}
-  .project:last-child{border:none; padding-bottom:0;}
-  .project-title{font-weight:500; font-size:15px; margin:0 0 3px;}
-  .project-meta{font-size:12px; color:var(--accent); font-family:var(--mono); margin-bottom:7px;}
-  .project-desc{font-size:14px; color:#3a3a3a; margin:0; font-weight:300;}
-
-  footer{
-    padding:30px 0 48px; text-align:center; color:var(--text-muted); font-size:12.5px;
-    border-top:1px solid var(--line); margin-top:20px;
-  }
-</style>
+<link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
 
 <header class="nav">
   <div class="nav-inner">
-    <span class="nav-name">shrita singh</span>
+    <a class="nav-name" href="index.html">shrita singh</a>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#about">home</a></li>
-      <li><a href="#background">background</a></li>
-      <li><a href="#patents">patents</a></li>
-      <li><a href="#publications">publications</a></li>
-      <li><a href="#projects">projects</a></li>
-      <li><a href="#contact">contact</a></li>
+      <li><a class="active" href="index.html">home</a></li>
+      <li><a href="publications.html">publications</a></li>
+      <li><a href="projects.html">projects</a></li>
+      <li><a href="cv.html">cv</a></li>
+      <li><a href="volunteering.html">volunteering</a></li>
+      <li><a href="blog.html">blog</a></li>
     </ul>
   </div>
 </header>
 
 <div class="wrap">
 
-  <section class="hero" id="about">
+  <section class="hero">
     <div class="hero-grid">
       <div>
         <h1 class="name">Shrita Singh</h1>
-        <div class="contact-row">
-          <a href="mailto:shritasingh2000@gmail.com">email</a>
-          <a href="https://www.linkedin.com/in/shrita-singh-0b3a4b161" target="_blank" rel="noopener">linkedin</a>
-          <a href="https://scholar.google.com/citations?user=9amC26oAAAAJ&hl=en" target="_blank" rel="noopener">scholar</a>
-          <a href="assets/pdf/CV_shrita.pdf" target="_blank" rel="noopener">cv</a>
-        </div>
         <div class="bio">
           <p>
             I'm an incoming student in the <strong>Master of Science in Robotics</strong> program at
@@ -248,145 +52,26 @@
           </p>
         </div>
       </div>
-      <div class="hero-photo">
+      <aside class="profile-col">
         <img src="assets/img/profile.jpg" alt="Portrait of Shrita Singh">
-      </div>
+        <div class="contact-row">
+          <a href="mailto:shritasingh2000@gmail.com">email</a>
+          <a href="https://www.linkedin.com/in/shrita-singh-0b3a4b161" target="_blank" rel="noopener">linkedin</a>
+          <a href="assets/pdf/CV_shrita.pdf" target="_blank" rel="noopener">cv</a>
+        </div>
+        <p class="profile-meta">
+          <strong>MS Robotics (incoming)</strong>
+          Carnegie Mellon University<br>
+          Robotics · Motion Planning · Learning
+        </p>
+      </aside>
     </div>
-  </section>
-
-  <section id="background">
-    <div class="section-head">
-      <h2 class="section-title">background</h2>
-    </div>
-
-    <!-- Horizontal timeline (desktop) -->
-    <div class="h-timeline">
-
-      <div class="h-item above">
-        <div class="h-content">
-          <p class="h-date">2017 – 2022</p>
-          <p class="h-role">Dual Degree, B.Tech + M.Tech</p>
-          <p class="h-org">IIT Bombay</p>
-          <p class="h-desc">Process systems &amp; energy engineering</p>
-        </div>
-        <div class="h-dot"></div>
-      </div>
-
-      <div class="h-item below">
-        <div class="h-dot"></div>
-        <div class="h-content">
-          <p class="h-date">may – jul 2020</p>
-          <p class="h-role">Junior Data Scientist</p>
-          <p class="h-org">Capgemini SE</p>
-          <p class="h-desc">Applied ML/NLP to enterprise support data</p>
-        </div>
-      </div>
-
-      <div class="h-item above">
-        <div class="h-content">
-          <p class="h-date">jun – aug 2021</p>
-          <p class="h-role">R&amp;D Intern</p>
-          <p class="h-org">ABB Corporate Research Center</p>
-          <p class="h-desc">Learning-based control via dynamic programming</p>
-        </div>
-        <div class="h-dot"></div>
-      </div>
-
-      <div class="h-item below">
-        <div class="h-dot"></div>
-        <div class="h-content">
-          <p class="h-date">oct 2022 – aug 2025</p>
-          <p class="h-role">AI Researcher</p>
-          <p class="h-org">Honda R&amp;D Tokyo</p>
-          <p class="h-desc">Cooperative behaviour planning for level-3+ autonomy</p>
-        </div>
-      </div>
-
-      <div class="h-item above">
-        <div class="h-content">
-          <p class="h-date">aug 2025 – present</p>
-          <p class="h-role">Behaviour Planning Engineer</p>
-          <p class="h-org">Applied Intuition</p>
-          <p class="h-desc">End-to-end planning for autonomous trucking</p>
-        </div>
-        <div class="h-dot"></div>
-      </div>
-
-    </div>
-
-    <!-- Vertical fallback (mobile) -->
-    <div class="v-timeline">
-      <div class="v-item">
-        <div class="v-date">2017 – 2022</div>
-        <div>
-          <p class="v-role">Dual Degree, B.Tech + M.Tech — IIT Bombay</p>
-          <p class="v-org">Process Systems Engineering &amp; Energy Science and Engineering</p>
-          <p class="v-desc">Process systems &amp; energy engineering</p>
-        </div>
-      </div>
-      <div class="v-item">
-        <div class="v-date">may – jul 2020</div>
-        <div>
-          <p class="v-role">Junior Data Scientist</p>
-          <p class="v-org">Capgemini SE, Digital Acceleration Centre · Bangalore</p>
-          <p class="v-desc">Applied ML/NLP to enterprise support ticket data</p>
-        </div>
-      </div>
-      <div class="v-item">
-        <div class="v-date">jun – aug 2021</div>
-        <div>
-          <p class="v-role">Research &amp; Development Intern</p>
-          <p class="v-org">ABB Corporate Research Center, Learning Based Control · Bangalore</p>
-          <p class="v-desc">Learning-based control via approximate dynamic programming</p>
-        </div>
-      </div>
-      <div class="v-item">
-        <div class="v-date">oct 2022 – aug 2025</div>
-        <div>
-          <p class="v-role">AI Researcher</p>
-          <p class="v-org">Honda R&amp;D Tokyo, Cooperative Intelligence Research Domain</p>
-          <p class="v-desc">Cooperative behaviour planning for level-3+ autonomy</p>
-        </div>
-      </div>
-      <div class="v-item">
-        <div class="v-date">aug 2025 – present</div>
-        <div>
-          <p class="v-role">Behaviour Planning Engineer</p>
-          <p class="v-org">Applied Intuition, Trucking Autonomy Team · Tokyo</p>
-          <p class="v-desc">End-to-end planning for autonomous truck driving</p>
-        </div>
-      </div>
-    </div>
-
-  </section>
-
-  <section id="patents">
-    <div class="section-head">
-      <h2 class="section-title">patents</h2>
-      <span class="section-count">2</span>
-    </div>
-    <ol class="num-list">
-      <li class="num-item">
-        <div>
-          <p class="num-title">Path Refinement for Obstacle Avoidance</p>
-          <p class="num-authors">Shumon Koga, <span class="me">Shrita Singh</span>, et al.</p>
-          <p class="num-venue">JP Patent H1240381JP01 · 2024</p>
-        </div>
-      </li>
-      <li class="num-item">
-        <div>
-          <p class="num-title">Prediction for Obstacle Avoidance</p>
-          <p class="num-authors">Rintaro Imamura, <span class="me">Shrita Singh</span>, et al.</p>
-          <p class="num-venue">JP Patent H1240478JP01 · 2024</p>
-        </div>
-      </li>
-    </ol>
   </section>
 
   <section id="publications">
     <div class="section-head">
-      <h2 class="section-title">publications</h2>
-      <span class="section-count">3</span>
+      <h2 class="section-title">selected publications</h2>
+      <a class="section-link" href="publications.html">all publications →</a>
     </div>
     <ol class="num-list">
       <li class="num-item">
@@ -407,53 +92,171 @@
         <div>
           <p class="num-title">Closed Loop Simulation for Attitude Control of Nano-Satellite</p>
           <p class="num-authors">Riya Singh, <span class="me">Shrita Singh</span>, et al.</p>
-          <p class="num-venue">Advances in Small Satellite Technologies, Springer · 2020 / Int'l Conf. on Small Satellites and Systems · 2019</p>
+          <p class="num-venue">Advances in Small Satellite Technologies, Springer · 2020</p>
         </div>
       </li>
     </ol>
   </section>
 
-  <section id="projects">
+  <section id="background">
     <div class="section-head">
-      <h2 class="section-title">selected projects</h2>
+      <h2 class="section-title">background</h2>
     </div>
-    <div class="project-list">
 
-      <div class="project">
-        <p class="project-title">Advitiy Nano-Satellite</p>
-        <p class="project-meta">Student Satellite Team, Attitude Determination &amp; Control · IIT Bombay · 2018–2019</p>
-        <p class="project-desc">Built a modular simulation framework for satellite dynamics and environment for controller testing, validated a PID controller via on-board in-loop simulation on Arduino, and modeled orbital solar power for the CubeSat's electrical budget.</p>
+    <div class="timeline-block">
+      <p class="timeline-label">Work experience</p>
+      <div class="h-timeline">
+        <div class="h-item above">
+          <div class="h-card">
+            <p class="h-date">may – jul 2020</p>
+            <p class="h-role">Junior Data Scientist</p>
+            <p class="h-org">Capgemini SE</p>
+            <p class="h-desc">ML/NLP on enterprise support data</p>
+          </div>
+          <div class="h-dot"></div>
+        </div>
+        <div class="h-item below">
+          <div class="h-dot"></div>
+          <div class="h-card">
+            <p class="h-date">jun – aug 2021</p>
+            <p class="h-role">R&amp;D Intern</p>
+            <p class="h-org">ABB Corporate Research</p>
+            <p class="h-desc">Learning-based control via ADP</p>
+          </div>
+        </div>
+        <div class="h-item above">
+          <div class="h-card">
+            <p class="h-date">oct 2022 – aug 2025</p>
+            <p class="h-role">AI Researcher</p>
+            <p class="h-org">Honda R&amp;D Tokyo</p>
+            <p class="h-desc">Cooperative behaviour planning</p>
+          </div>
+          <div class="h-dot"></div>
+        </div>
+        <div class="h-item below">
+          <div class="h-dot"></div>
+          <div class="h-card">
+            <p class="h-date">aug 2025 – present</p>
+            <p class="h-role">Behaviour Planning Eng.</p>
+            <p class="h-org">Applied Intuition</p>
+            <p class="h-desc">End-to-end trucking autonomy</p>
+          </div>
+        </div>
       </div>
-
-      <div class="project">
-        <p class="project-title">Optimal Control of a Plug-in Hybrid Vehicle</p>
-        <p class="project-meta">Prof. Ravi N. Banavar, IIT Bombay · 2019</p>
-        <p class="project-desc">Formulated an optimal control problem minimizing fuel consumption for a given position/speed profile, built a modular closed-loop Simulink simulator across driving cycles and road grades, and solved the OCP via multiple shooting and Pontryagin's Maximum Principle.</p>
+      <div class="v-timeline">
+        <div class="v-item">
+          <div class="v-date">may – jul 2020</div>
+          <div>
+            <p class="v-role">Junior Data Scientist</p>
+            <p class="v-org">Capgemini SE · Bangalore</p>
+            <p class="v-desc">Applied ML/NLP to enterprise support ticket data</p>
+          </div>
+        </div>
+        <div class="v-item">
+          <div class="v-date">jun – aug 2021</div>
+          <div>
+            <p class="v-role">R&amp;D Intern</p>
+            <p class="v-org">ABB Corporate Research Center · Bangalore</p>
+            <p class="v-desc">Learning-based control via approximate dynamic programming</p>
+          </div>
+        </div>
+        <div class="v-item">
+          <div class="v-date">oct 2022 – aug 2025</div>
+          <div>
+            <p class="v-role">AI Researcher</p>
+            <p class="v-org">Honda R&amp;D Tokyo</p>
+            <p class="v-desc">Cooperative behaviour planning for level-3+ autonomy</p>
+          </div>
+        </div>
+        <div class="v-item">
+          <div class="v-date">aug 2025 – present</div>
+          <div>
+            <p class="v-role">Behaviour Planning Engineer</p>
+            <p class="v-org">Applied Intuition · Tokyo</p>
+            <p class="v-desc">End-to-end planning for autonomous truck driving</p>
+          </div>
+        </div>
       </div>
+    </div>
 
+    <div class="timeline-block">
+      <p class="timeline-label">Education</p>
+      <div class="h-timeline">
+        <div class="h-item above">
+          <div class="h-card">
+            <p class="h-date">2017 – 2021</p>
+            <p class="h-role">B.Tech</p>
+            <p class="h-org">IIT Bombay</p>
+            <p class="h-desc">Energy Science &amp; Systems Eng.</p>
+          </div>
+          <div class="h-dot"></div>
+        </div>
+        <div class="h-item below">
+          <div class="h-dot"></div>
+          <div class="h-card">
+            <p class="h-date">2017 – 2021</p>
+            <p class="h-role">Minor / Diploma</p>
+            <p class="h-org">IIT Bombay</p>
+            <p class="h-desc">Systems &amp; Control Engineering</p>
+          </div>
+        </div>
+        <div class="h-item above">
+          <div class="h-card">
+            <p class="h-date">2021 – 2022</p>
+            <p class="h-role">M.Tech</p>
+            <p class="h-org">IIT Bombay</p>
+            <p class="h-desc">Process Systems Engineering</p>
+          </div>
+          <div class="h-dot"></div>
+        </div>
+        <div class="h-item below">
+          <div class="h-dot"></div>
+          <div class="h-card">
+            <p class="h-date">incoming</p>
+            <p class="h-role">MS Robotics</p>
+            <p class="h-org">Carnegie Mellon</p>
+            <p class="h-desc">Robot learning &amp; planning</p>
+          </div>
+        </div>
+      </div>
+      <div class="v-timeline">
+        <div class="v-item">
+          <div class="v-date">2017 – 2021</div>
+          <div>
+            <p class="v-role">B.Tech — Energy Science and Systems Engineering</p>
+            <p class="v-org">IIT Bombay</p>
+          </div>
+        </div>
+        <div class="v-item">
+          <div class="v-date">2017 – 2021</div>
+          <div>
+            <p class="v-role">Diploma — Systems and Control Engineering</p>
+            <p class="v-org">IIT Bombay</p>
+          </div>
+        </div>
+        <div class="v-item">
+          <div class="v-date">2021 – 2022</div>
+          <div>
+            <p class="v-role">M.Tech — Process Systems Engineering</p>
+            <p class="v-org">IIT Bombay · R.G. Manudhane Student Excellence Award</p>
+          </div>
+        </div>
+        <div class="v-item">
+          <div class="v-date">incoming</div>
+          <div>
+            <p class="v-role">MS Robotics</p>
+            <p class="v-org">Carnegie Mellon University</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <footer id="contact">
+  <footer>
     <p>shritasingh2000@gmail.com &nbsp;·&nbsp; <a href="assets/pdf/CV_shrita.pdf">cv</a> &nbsp;·&nbsp; © 2026 Shrita Singh</p>
   </footer>
-
 </div>
 
-<script>
-  const navToggle = document.getElementById('navToggle');
-  const navLinks = document.getElementById('navLinks');
-  navToggle.addEventListener('click', () => {
-    const open = navLinks.classList.toggle('open');
-    navToggle.setAttribute('aria-expanded', open);
-  });
-  navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      navLinks.classList.remove('open');
-      navToggle.setAttribute('aria-expanded', false);
-    });
-  });
-</script>
-
+<script src="assets/js/nav.js"></script>
 </body>
 </html>
