@@ -14,6 +14,9 @@
       panel.classList.toggle('active', on);
       panel.hidden = !on;
     });
+    requestAnimationFrame(() => {
+      document.dispatchEvent(new CustomEvent('bg-panel-change'));
+    });
   };
 
   tabs.forEach(tab => {
