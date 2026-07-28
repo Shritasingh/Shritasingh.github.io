@@ -6,7 +6,7 @@
   --blue:#2563eb;
   --purple:#7c3aed;
   --violet:#a855f7;
-  --pink:#ec4899;
+  --pink:#be185d;
   --accent:#7c3aed;
   --accent-soft:#f3e8ff;
   --serif:"Source Serif 4", "Noto Serif", Georgia, serif;
@@ -151,7 +151,7 @@ header.nav{
 [data-theme="dark"] .page-lead{color:#d6ddf2;}
 [data-theme="dark"] .nav-links a{color:var(--muted);}
 [data-theme="dark"] .nav-links a:hover,
-[data-theme="dark"] .nav-links a.active{color:#f472b6;}
+[data-theme="dark"] .nav-links a.active{color:#db2777;}
 [data-theme="dark"] .contact-row a,
 [data-theme="dark"] .pub-links a,
 [data-theme="dark"] .theme-toggle{color:#d6ddf2;}
@@ -223,12 +223,12 @@ section{padding:40px 0 12px;}
   display:flex; align-items:baseline; justify-content:space-between; gap:12px;
 }
 h2.section-title{
-  font-family:var(--serif); font-weight:700; font-size:28px; margin:0;
+  font-family:var(--serif); font-weight:800; font-size:28px; margin:0;
   text-transform:none; letter-spacing:normal; color:var(--text);
 }
 .section-link{font-size:14px; white-space:nowrap;}
 .page-title{
-  font-family:var(--serif); font-weight:700; font-size:32px;
+  font-family:var(--serif); font-weight:800; font-size:32px;
   margin:36px 0 8px; line-height:1.2;
 }
 .page-lead{color:var(--muted); font-size:18px; margin:0 0 28px; line-height:1.55;}
@@ -270,7 +270,7 @@ h2.section-title{
 .pub-tile h3{
   font-family:var(--serif);
   font-size:24px;
-  font-weight:700;
+  font-weight:800;
   line-height:1.25;
   letter-spacing:-0.02em;
   margin:0 0 8px;
