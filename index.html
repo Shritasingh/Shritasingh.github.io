@@ -22,7 +22,6 @@
       <li><a class="active" href="index.html">home</a></li>
       <li><a href="publications.html">publications</a></li>
       <li><a href="projects.html">projects</a></li>
-      <li><a href="cv.html">cv</a></li>
       <li><a href="volunteering.html">volunteering</a></li>
       <li><a href="blog.html">blog</a></li>
     </ul>
@@ -103,149 +102,186 @@
       <h2 class="section-title">background</h2>
     </div>
 
-    <div class="timeline-block">
-      <p class="timeline-label">Work experience</p>
-      <div class="h-timeline">
+    <div class="bg-toggle" role="tablist" aria-label="Background">
+      <button type="button" class="bg-tab active" role="tab" aria-selected="true" aria-controls="panel-work" id="tab-work" data-panel="work">Work experience</button>
+      <button type="button" class="bg-tab" role="tab" aria-selected="false" aria-controls="panel-education" id="tab-education" data-panel="education">Education</button>
+    </div>
+
+    <div class="bg-panel active" id="panel-work" role="tabpanel" aria-labelledby="tab-work">
+      <div class="bar-timeline">
+        <div class="bar-lanes bar-lanes-work">
+          <div class="bar-track" aria-hidden="true">
+            <div class="bar-seg" style="--bar-color:#a8134e; --bar-start:0.08; --bar-end:0.14"></div>
+          </div>
+          <div class="bar-track" aria-hidden="true">
+            <div class="bar-seg" style="--bar-color:#c41e6a; --bar-start:0.22; --bar-end:0.28"></div>
+          </div>
+          <div class="bar-track" aria-hidden="true">
+            <div class="bar-seg" style="--bar-color:#7a0f3d; --bar-start:0.38; --bar-end:0.82"></div>
+          </div>
+          <div class="bar-track" aria-hidden="true">
+            <div class="bar-seg" style="--bar-color:#d4537a; --bar-start:0.82; --bar-end:1"></div>
+          </div>
+        </div>
+        <div class="bar-labels">
+          <span>2020</span><span>2021</span><span>2022</span><span>2023</span><span>2024</span><span>2025</span><span>2026</span>
+        </div>
+      </div>
+      <div class="h-timeline bar-cards">
         <div class="h-item above">
-          <div class="h-card">
-            <p class="h-date">may – jul 2020</p>
+          <div class="h-card" style="--card-accent:#a8134e">
+            <p class="h-date">May – Jul 2020</p>
             <p class="h-role">Junior Data Scientist</p>
+            <p class="h-location">Bangalore, India</p>
             <p class="h-org">Capgemini SE</p>
-            <p class="h-desc">ML/NLP on enterprise support data</p>
           </div>
-          <div class="h-dot"></div>
+          <div class="h-dot" style="border-color:#a8134e"></div>
         </div>
         <div class="h-item below">
-          <div class="h-dot"></div>
-          <div class="h-card">
-            <p class="h-date">jun – aug 2021</p>
+          <div class="h-dot" style="border-color:#c41e6a"></div>
+          <div class="h-card" style="--card-accent:#c41e6a">
+            <p class="h-date">Jun – Aug 2021</p>
             <p class="h-role">R&amp;D Intern</p>
+            <p class="h-location">Bangalore, India</p>
             <p class="h-org">ABB Corporate Research</p>
-            <p class="h-desc">Learning-based control via ADP</p>
           </div>
         </div>
         <div class="h-item above">
-          <div class="h-card">
-            <p class="h-date">oct 2022 – aug 2025</p>
+          <div class="h-card" style="--card-accent:#7a0f3d">
+            <p class="h-date">Oct 2022 – Aug 2025</p>
             <p class="h-role">AI Researcher</p>
+            <p class="h-location">Tokyo, Japan</p>
             <p class="h-org">Honda R&amp;D Tokyo</p>
-            <p class="h-desc">Cooperative behaviour planning</p>
           </div>
-          <div class="h-dot"></div>
+          <div class="h-dot" style="border-color:#7a0f3d"></div>
         </div>
         <div class="h-item below">
-          <div class="h-dot"></div>
-          <div class="h-card">
-            <p class="h-date">aug 2025 – present</p>
-            <p class="h-role">Behaviour Planning Eng.</p>
+          <div class="h-dot" style="border-color:#d4537a"></div>
+          <div class="h-card" style="--card-accent:#d4537a">
+            <p class="h-date">Aug 2025 – Present</p>
+            <p class="h-role">Behaviour Planning Engineer</p>
+            <p class="h-location">Tokyo, Japan</p>
             <p class="h-org">Applied Intuition</p>
-            <p class="h-desc">End-to-end trucking autonomy</p>
           </div>
         </div>
       </div>
-      <div class="v-timeline">
-        <div class="v-item">
-          <div class="v-date">may – jul 2020</div>
+      <div class="v-timeline v-bar-list">
+        <div class="v-item" style="--bar-color:#a8134e">
+          <div class="v-date">May – Jul 2020</div>
           <div>
             <p class="v-role">Junior Data Scientist</p>
-            <p class="v-org">Capgemini SE · Bangalore</p>
-            <p class="v-desc">Applied ML/NLP to enterprise support ticket data</p>
+            <p class="v-location">Bangalore, India · Capgemini SE</p>
           </div>
         </div>
-        <div class="v-item">
-          <div class="v-date">jun – aug 2021</div>
+        <div class="v-item" style="--bar-color:#c41e6a">
+          <div class="v-date">Jun – Aug 2021</div>
           <div>
             <p class="v-role">R&amp;D Intern</p>
-            <p class="v-org">ABB Corporate Research Center · Bangalore</p>
-            <p class="v-desc">Learning-based control via approximate dynamic programming</p>
+            <p class="v-location">Bangalore, India · ABB Corporate Research</p>
           </div>
         </div>
-        <div class="v-item">
-          <div class="v-date">oct 2022 – aug 2025</div>
+        <div class="v-item" style="--bar-color:#7a0f3d">
+          <div class="v-date">Oct 2022 – Aug 2025</div>
           <div>
             <p class="v-role">AI Researcher</p>
-            <p class="v-org">Honda R&amp;D Tokyo</p>
-            <p class="v-desc">Cooperative behaviour planning for level-3+ autonomy</p>
+            <p class="v-location">Tokyo, Japan · Honda R&amp;D Tokyo</p>
           </div>
         </div>
-        <div class="v-item">
-          <div class="v-date">aug 2025 – present</div>
+        <div class="v-item" style="--bar-color:#d4537a">
+          <div class="v-date">Aug 2025 – Present</div>
           <div>
             <p class="v-role">Behaviour Planning Engineer</p>
-            <p class="v-org">Applied Intuition · Tokyo</p>
-            <p class="v-desc">End-to-end planning for autonomous truck driving</p>
+            <p class="v-location">Tokyo, Japan · Applied Intuition</p>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="timeline-block">
-      <p class="timeline-label">Education</p>
-      <div class="h-timeline">
+    <div class="bg-panel" id="panel-education" role="tabpanel" aria-labelledby="tab-education" hidden>
+      <div class="bar-timeline">
+        <div class="bar-lanes">
+          <div class="bar-track" aria-hidden="true">
+            <div class="bar-seg" style="--bar-color:#a8134e; --bar-start:0; --bar-end:0.44"></div>
+          </div>
+          <div class="bar-track" aria-hidden="true">
+            <div class="bar-seg" style="--bar-color:#c41e6a; --bar-start:0; --bar-end:0.44"></div>
+          </div>
+          <div class="bar-track" aria-hidden="true">
+            <div class="bar-seg" style="--bar-color:#7a0f3d; --bar-start:0.44; --bar-end:0.56"></div>
+          </div>
+          <div class="bar-track" aria-hidden="true">
+            <div class="bar-seg" style="--bar-color:#d4537a; --bar-start:0.89; --bar-end:1"></div>
+          </div>
+        </div>
+        <div class="bar-labels">
+          <span>2017</span><span>2019</span><span>2021</span><span>2023</span><span>2025</span><span>2026</span>
+        </div>
+      </div>
+      <div class="h-timeline bar-cards edu-cards">
         <div class="h-item above">
-          <div class="h-card">
+          <div class="h-card" style="--card-accent:#a8134e">
             <p class="h-date">2017 – 2021</p>
             <p class="h-role">B.Tech</p>
-            <p class="h-org">IIT Bombay</p>
-            <p class="h-desc">Energy Science &amp; Systems Eng.</p>
+            <p class="h-location">Mumbai, India</p>
+            <p class="h-org">IIT Bombay · Energy Science &amp; Systems Eng.</p>
           </div>
-          <div class="h-dot"></div>
+          <div class="h-dot" style="border-color:#a8134e"></div>
         </div>
         <div class="h-item below">
-          <div class="h-dot"></div>
-          <div class="h-card">
+          <div class="h-dot" style="border-color:#c41e6a"></div>
+          <div class="h-card" style="--card-accent:#c41e6a">
             <p class="h-date">2017 – 2021</p>
             <p class="h-role">Minor / Diploma</p>
-            <p class="h-org">IIT Bombay</p>
-            <p class="h-desc">Systems &amp; Control Engineering</p>
+            <p class="h-location">Mumbai, India</p>
+            <p class="h-org">IIT Bombay · Systems &amp; Control Engineering</p>
           </div>
         </div>
         <div class="h-item above">
-          <div class="h-card">
+          <div class="h-card" style="--card-accent:#7a0f3d">
             <p class="h-date">2021 – 2022</p>
             <p class="h-role">M.Tech</p>
-            <p class="h-org">IIT Bombay</p>
-            <p class="h-desc">Process Systems Engineering</p>
+            <p class="h-location">Mumbai, India</p>
+            <p class="h-org">IIT Bombay · Process Systems Engineering</p>
           </div>
-          <div class="h-dot"></div>
+          <div class="h-dot" style="border-color:#7a0f3d"></div>
         </div>
         <div class="h-item below">
-          <div class="h-dot"></div>
-          <div class="h-card">
-            <p class="h-date">incoming</p>
+          <div class="h-dot" style="border-color:#d4537a"></div>
+          <div class="h-card" style="--card-accent:#d4537a">
+            <p class="h-date">Incoming</p>
             <p class="h-role">MS Robotics</p>
-            <p class="h-org">Carnegie Mellon</p>
-            <p class="h-desc">Robot learning &amp; planning</p>
+            <p class="h-location">Pittsburgh, USA</p>
+            <p class="h-org">Carnegie Mellon University</p>
           </div>
         </div>
       </div>
-      <div class="v-timeline">
-        <div class="v-item">
+      <div class="v-timeline v-bar-list">
+        <div class="v-item" style="--bar-color:#a8134e">
           <div class="v-date">2017 – 2021</div>
           <div>
             <p class="v-role">B.Tech — Energy Science and Systems Engineering</p>
-            <p class="v-org">IIT Bombay</p>
+            <p class="v-location">Mumbai, India · IIT Bombay</p>
           </div>
         </div>
-        <div class="v-item">
+        <div class="v-item" style="--bar-color:#c41e6a">
           <div class="v-date">2017 – 2021</div>
           <div>
             <p class="v-role">Diploma — Systems and Control Engineering</p>
-            <p class="v-org">IIT Bombay</p>
+            <p class="v-location">Mumbai, India · IIT Bombay</p>
           </div>
         </div>
-        <div class="v-item">
+        <div class="v-item" style="--bar-color:#7a0f3d">
           <div class="v-date">2021 – 2022</div>
           <div>
             <p class="v-role">M.Tech — Process Systems Engineering</p>
-            <p class="v-org">IIT Bombay · R.G. Manudhane Student Excellence Award</p>
+            <p class="v-location">Mumbai, India · IIT Bombay</p>
           </div>
         </div>
-        <div class="v-item">
-          <div class="v-date">incoming</div>
+        <div class="v-item" style="--bar-color:#d4537a">
+          <div class="v-date">Incoming</div>
           <div>
             <p class="v-role">MS Robotics</p>
-            <p class="v-org">Carnegie Mellon University</p>
+            <p class="v-location">Pittsburgh, USA · Carnegie Mellon University</p>
           </div>
         </div>
       </div>
@@ -258,5 +294,6 @@
 </div>
 
 <script src="assets/js/nav.js"></script>
+<script src="assets/js/background.js"></script>
 </body>
 </html>
