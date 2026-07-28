@@ -7,20 +7,33 @@
 <meta name="description" content="Selected projects by Shrita Singh.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,600;1,400&family=Roboto:wght@300;400;500;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;0,8..60,800;1,8..60,400&family=Noto+Serif:ital,wght@0,400;0,600;1,400&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>
+(() => {
+  const saved = localStorage.getItem('theme');
+  const systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const theme = saved || (systemDark ? 'dark' : 'light');
+  document.documentElement.setAttribute('data-theme', theme);
+})();
+</script>
 <link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
 
 <header class="nav">
   <div class="nav-inner">
-    <a class="nav-name" href="index.html">shrita singh</a>
+    <a class="nav-name" href="index.html">Shrita Singh</a>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+      <span class="theme-toggle-light" aria-hidden="true">sun</span>
+      <span class="theme-toggle-dark" aria-hidden="true">moon</span>
+    </button>
     <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">home</a></li>
+      <li><a href="index.html"><svg class="nav-home-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5L12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg> home</a></li>
       <li><a href="publications.html">publications</a></li>
+      <li><a href="experience.html">experience</a></li>
       <li><a class="active" href="projects.html">projects</a></li>
       <li><a href="volunteering.html">volunteering</a></li>
       <li><a href="blog.html">blog</a></li>
@@ -31,36 +44,53 @@
 <div class="wrap">
   <h1 class="page-title">Projects</h1>
   <p class="page-lead">Selected technical projects spanning satellites, optimal control, and modeling.</p>
+  <p class="note-inline">TBA photos for projects.</p>
 
-  <div class="project-list">
-    <div class="project">
-      <p class="project-title">Advitiy Nano-Satellite</p>
-      <p class="project-meta">Student Satellite Team, Attitude Determination &amp; Control · IIT Bombay · 2018–2019</p>
-      <p class="project-desc">Built a modular simulation framework for satellite dynamics and environment for controller testing, validated a PID controller via on-board in-loop simulation on Arduino, and modeled orbital solar power for the CubeSat's electrical budget.</p>
-    </div>
+  <div class="pub-tiles">
+    <article class="pub-tile">
+      <img class="pub-thumb" src="assets/img/ethpdf/p03_img03.jpeg" alt="Advitiy satellite program logo">
+      <div>
+        <span class="pub-badge">Satellite</span>
+        <h3>Advitiy Nano-Satellite</h3>
+        <p class="pub-venue">Student Satellite Team, Attitude Determination and Control · IIT Bombay · 2018-2019</p>
+        <p class="pub-tldr">Built a modular simulation framework for satellite dynamics and environment for controller testing, validated a PID controller via on-board-in-loop simulation on Arduino, and modeled orbital solar power for the CubeSat electrical budget.</p>
+      </div>
+    </article>
 
-    <div class="project">
-      <p class="project-title">Optimal Control of a Plug-in Hybrid Vehicle</p>
-      <p class="project-meta">Prof. Ravi N. Banavar, IIT Bombay · 2019</p>
-      <p class="project-desc">Formulated an optimal control problem minimizing fuel consumption for a given position/speed profile, built a modular closed-loop Simulink simulator across driving cycles and road grades, and solved the OCP via multiple shooting and Pontryagin's Maximum Principle.</p>
-    </div>
+    <article class="pub-tile">
+      <img class="pub-thumb cover" src="assets/img/ethpdf/p04_img02.png" alt="Hybrid vehicle powertrain schematic">
+      <div>
+        <span class="pub-badge">Optimal control</span>
+        <h3>Optimal Control of a Plug-in Hybrid Vehicle</h3>
+        <p class="pub-venue">Prof. Ravi N. Banavar · IIT Bombay · 2019</p>
+        <p class="pub-tldr">Formulated a fuel-minimizing optimal control problem for a prescribed drive profile, built a modular closed-loop Simulink simulator over multiple cycles and grades, and solved representative cases via multiple shooting and Pontryagin's Maximum Principle.</p>
+      </div>
+    </article>
 
-    <div class="project">
-      <p class="project-title">Data-Driven Dynamic Modelling Algorithms</p>
-      <p class="project-meta">Process Systems Engineering · IIT Bombay</p>
-      <p class="project-desc">Developed discrete-time black-box models using stochastic processes and parameter estimation via optimization; implemented recursive parameter updates for ARX, OE, and ARMAX models, and extended them to block-data updates of parameters and covariance.</p>
-    </div>
+    <article class="pub-tile">
+      <img class="pub-thumb cover" src="assets/img/ethpdf/p12_img02.png" alt="System identification result plot">
+      <div>
+        <span class="pub-badge">Modeling</span>
+        <h3>Data-Driven Dynamic Modelling Algorithms</h3>
+        <p class="pub-venue">Process Systems Engineering · IIT Bombay</p>
+        <p class="pub-tldr">Developed discrete-time black-box models with optimization-based parameter estimation, implemented recursive updates for ARX, OE, and ARMAX families, and extended them to block-data covariance and parameter updates.</p>
+      </div>
+    </article>
 
-    <div class="project">
-      <p class="project-title">Model Predictive Control of a Reactor System</p>
-      <p class="project-meta">Process Control · IIT Bombay</p>
-      <p class="project-desc">Designed and simulated an MPC for a nonlinear CSTR to track concentration and temperature setpoints under input constraints, with state estimation and innovation-bias correction for model–plant mismatch.</p>
-    </div>
+    <article class="pub-tile">
+      <img class="pub-thumb cover" src="assets/img/ethpdf/p03_img04.jpeg" alt="Temperature control lab kit">
+      <div>
+        <span class="pub-badge">Control</span>
+        <h3>Model Predictive Control of a Reactor System</h3>
+        <p class="pub-venue">Process Control · IIT Bombay</p>
+        <p class="pub-tldr">Designed and simulated MPC for a nonlinear CSTR with input constraints, combining state estimation and innovation-bias correction to manage model-plant mismatch.</p>
+      </div>
+    </article>
   </div>
 
   <footer>
     <p>
-      &copy; Copyright 2026 Shrita Singh. Built with HTML, CSS, and JavaScript. Hosted by GitHub Pages. Last updated: Jul 28, 2026.
+      &copy; Copyright 2026 Shrita Singh. Hosted by GitHub Pages. Last updated: Jul 28, 2026.
     </p>
   </footer>
 </div>
