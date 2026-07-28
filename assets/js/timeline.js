@@ -31,7 +31,6 @@
 
     const padding = 24;
     const cardW = 232;
-    const minGap = cardW + 16;
     const globalMin = Math.floor(Math.min(...entries.map((e) => e.start)));
     const globalMax = Math.ceil(Math.max(...entries.map((e) => e.end)));
     const span = globalMax - globalMin || 1;
@@ -53,15 +52,6 @@
         centerPx: midPx,
       };
     });
-
-    for (const above of [true, false]) {
-      const row = positions.filter((p) => p.isAbove === above).sort((a, b) => a.centerPx - b.centerPx);
-      for (let j = 1; j < row.length; j++) {
-        if (row[j].centerPx - row[j - 1].centerPx < minGap) {
-          row[j].centerPx = row[j - 1].centerPx + minGap;
-        }
-      }
-    }
 
     positions.forEach((p) => {
       p.centerPx = Math.max(padding + cardW / 2, Math.min(width - padding - cardW / 2, p.centerPx));
@@ -92,7 +82,7 @@
 
       const wrap = document.createElement('div');
       wrap.className = 'tl-item';
-      wrap.style.left = `${p.centerPx}px`;
+      wrap.style.left = `${p.midPx}px`;
       const card = p.entry.el.querySelector('.tl-card');
       if (card) {
         const clone = card.cloneNode(true);
@@ -104,7 +94,7 @@
 
       const row = p.isAbove ? topRow : bottomRow;
       row.appendChild(wrap);
-      placed.push({ wrap, ...p });
+      placed.push({ wrap, ...p, centerPx: p.midPx });
     });
 
     const axisRow = root.querySelector('.tl-axis-row');
@@ -116,14 +106,14 @@
       svgEl.setAttribute('height', String(stage.offsetHeight));
       svgEl.innerHTML = '';
       placed.forEach((p) => {
-        const cardX = p.centerPx;
+        const cardX = p.midPx;
         const cardY = p.isAbove
           ? p.wrap.offsetTop + p.wrap.offsetHeight
           : p.wrap.offsetTop;
         const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
         line.setAttribute('x1', String(cardX));
         line.setAttribute('y1', String(cardY));
-        line.setAttribute('x2', String(p.midPx));
+        line.setAttribute('x2', String(cardX));
         line.setAttribute('y2', String(axisY));
         line.setAttribute('stroke', p.entry.color);
         line.setAttribute('stroke-width', '1.5');
