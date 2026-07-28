@@ -44,17 +44,31 @@ header.nav{
   font-weight:600; font-size:18px; letter-spacing:-0.02em;
   color:var(--text); white-space:nowrap;
 }
+.nav-name-home{
+  visibility:hidden;
+  pointer-events:none;
+  min-width:0;
+  width:0;
+  overflow:hidden;
+}
 .nav-links{
   display:flex; flex-wrap:wrap; gap:8px 8px; list-style:none;
   margin:0; padding:0; justify-content:flex-end;
+  margin-left:auto;
 }
 .nav-links a{
   color:var(--muted); font-size:14px; font-weight:400;
   letter-spacing:normal;
   padding:6px 12px; border-radius:999px;
+  display:inline-flex; align-items:center; gap:6px;
 }
 .nav-links a:hover,
 .nav-links a.active{color:var(--text); text-decoration:none; font-weight:500;}
+.nav-home-icon{
+  display:inline-block;
+  flex-shrink:0;
+  vertical-align:middle;
+}
 .nav-toggle{display:none; background:none; border:none; cursor:pointer; padding:4px;}
 .nav-toggle span{display:block; width:20px; height:2px; background:var(--text); margin:4px 0;}
 
