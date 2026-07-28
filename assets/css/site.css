@@ -108,6 +108,7 @@ header.nav{
   align-items:center;
   justify-content:center;
   gap:0;
+  margin-left:-14px;
   transition:background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 .theme-toggle:hover{color:var(--text);}
